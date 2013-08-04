@@ -3,5 +3,7 @@ dep 'work ready' do
     'build tools',
     'git.src',
     'nodejs',
-    'npm.src'
+    'npm.src',
+    'homebrew',
+    'subl'
 end
