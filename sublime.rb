@@ -9,3 +9,16 @@ dep 'subl', template: 'sym_link' do
   destination '/usr/local/bin/subl'
   use_sudo true
 end
+
+dep 'sublime package control' do
+  package_name = "Package\ Control.sublime-package"
+  dir = "#{ENV['HOME']}/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/"
+  source = "http://sublime.wbond.net/Package%20Control.sublime-package"
+
+  met? {
+    "#{dir}#{package_name}".p.exists?
+  }
+  meet {
+    shell "wget --directory-prefix='#{dir}' #{source}"
+  }
+end

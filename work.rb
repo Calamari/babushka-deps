@@ -5,5 +5,6 @@ dep 'work ready' do
     'nodejs',
     'npm.src',
     'homebrew',
-    'subl'
+    'subl',
+    'sublime package control'
 end
