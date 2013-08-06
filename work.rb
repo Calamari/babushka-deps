@@ -6,5 +6,6 @@ dep 'work ready' do
     'npm.src',
     'homebrew',
     'subl',
-    'sublime package control'
+    'sublime package control',
+    'rbenv ruby'
 end
