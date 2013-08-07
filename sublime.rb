@@ -13,6 +13,7 @@ dep 'subl', :template => 'sym_link' do
 end
 
 dep 'sublime package control' do
+  requires 'wget.managed'
   package_name = "Package\ Control.sublime-package"
   dir = "#{ENV['HOME']}/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/"
   source = "http://sublime.wbond.net/Package%20Control.sublime-package"
