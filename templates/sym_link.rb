@@ -9,7 +9,7 @@ meta :sym_link do
     meet {
       log_shell "Symlinking #{destination}",
                 "ln -s #{source} #{destination}",
-                sudo: use_sudo
+                :sudo => use_sudo
     }
   }
 end
