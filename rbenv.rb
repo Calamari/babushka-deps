@@ -3,8 +3,7 @@ dep 'rbenv' do
     'rbenv cloned',
     'rbenv path',
     'rbenv init',
-    'ruby-build.managed', # allows installing ruby version through 'rbenv install #version'
-    'rbenv version'
+    'ruby-build.managed' # allows installing ruby version through 'rbenv install #version'
 end
 
 dep 'rbenv cloned' do
