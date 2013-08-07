@@ -1,7 +1,7 @@
 babushka-deps
 =============
 
-My babushka deps, only for Mac.
+My babushka deps, only for Mac. Currently containing (some of) my working environment.
 
 ## What is Babushka?
 
@@ -37,3 +37,9 @@ babushka sources -u
 
 [Babushka]: http://babushka.me/
 
+
+## TODOs
+
+- Install sublime packages
+- Shell scripts?
+- GitX or GitTower?
