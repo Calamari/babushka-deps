@@ -63,3 +63,8 @@ dep 'rbenv ruby', :version do
     log_shell "Installing ruby", "PATH=$HOME/.rbenv/bin:$PATH rbenv install #{version}"
   }
 end
+
+dep 'bundler' do
+  met? { in_path? 'bundle'}
+  meet { shell 'gem install bundler' }
+end

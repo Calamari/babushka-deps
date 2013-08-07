@@ -9,5 +9,6 @@ dep 'work ready' do
     'subl',
     'sublime package control',
     'rbenv ruby',
+    'bundler',
     'iterm'
 end
