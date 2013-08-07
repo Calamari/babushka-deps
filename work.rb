@@ -1,5 +1,6 @@
 dep 'work ready' do
   requires \
+    'brew',
     'build tools',
     'git.src',
     'nodejs',
