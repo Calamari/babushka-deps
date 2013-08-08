@@ -64,6 +64,10 @@ dep 'rbenv ruby', :version do
 end
 
 dep 'bundler' do
-  met? { in_path? 'bundle'}
-  meet { shell 'gem install bundler' }
+  met? { in_path? 'bundle' }
+  meet {
+    shell('git clone git://github.com/carsomyr/rbenv-bundler.git $HOME/.rbenv/plugins/bundler') if in_path? 'rbenv'
+    shell 'gem install bundler'
+    shell('$HOME/.rbenv/bin/rbenv rehash') if in_path? 'rbenv'
+  }
 end
