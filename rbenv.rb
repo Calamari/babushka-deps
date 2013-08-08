@@ -4,11 +4,11 @@ dep 'rbenv' do
     'rbenv path',
     'rbenv init',
     'ruby-build.managed' # allows installing ruby version through 'rbenv install #version'
+  #  'rbenv version'
 end
 
 dep 'rbenv cloned' do
   met? {
-    p "#{ENV['HOME']}/.rbenv"
     "#{ENV['HOME']}/.rbenv".p.exists?
   }
 
@@ -40,7 +40,6 @@ dep 'rbenv path' do
   meet {
     log_shell "Add rbenv to PATH", "echo '#{export_string}' >> ~/.bash_profile"
     shell export_string
-    p shell "echo $PATH"
   }
 end
 
@@ -60,6 +59,7 @@ dep 'rbenv ruby', :version do
 
   meet {
     log_shell "Installing ruby", "PATH=$HOME/.rbenv/bin:$PATH rbenv install #{version}"
+    log_shell "Making #{version} the default ruby", "PATH=$HOME/.rbenv/bin:$PATH rbenv global 2.0.0-p247"
   }
 end
 
