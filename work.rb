@@ -3,6 +3,7 @@ dep 'work ready' do
     'brew',
     'build tools',
     'git.src',
+    'git autocompletion',
     'nodejs',
     'npm.src',
     'homebrew',
