@@ -12,5 +12,6 @@ dep 'work ready' do
     'rbenv ruby',
     'bundler',
     'iterm',
+    'ccmenu.app',
     'configs'
 end
