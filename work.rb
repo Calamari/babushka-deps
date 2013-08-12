@@ -6,6 +6,7 @@ dep 'work ready' do
     'git autocompletion',
     'nodejs',
     'npm.src',
+    'phantomjs',
     'homebrew',
     'subl',
     'sublime package control',
