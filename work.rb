@@ -14,5 +14,6 @@ dep 'work ready' do
     'bundler',
     'iterm',
     'ccmenu.app',
-    'configs'
+    'configs',
+    'redis'
 end
