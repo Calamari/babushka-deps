@@ -15,6 +15,11 @@ dep 'work ready' do
     'iterm',
     'ccmenu.app',
     'configs',
+
+    # Databases
     'redis',
-    'mongodb'
+    'mongodb',
+
+    # NPM packages
+    'nodemon.npm'
 end

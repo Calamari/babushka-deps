@@ -3,3 +3,7 @@ dep 'nodejs', :version, :template => 'src' do
   source "http://nodejs.org/dist/v#{version}/node-v#{version}.tar.gz"
   provides "node ~> #{version}"
 end
+
+dep 'nodemon.npm' do
+  provides 'nodemon'
+end
