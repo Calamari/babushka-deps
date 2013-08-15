@@ -12,6 +12,7 @@ dep 'work ready' do
     'sublime package control',
     'rbenv ruby',
     'bundler',
+    'sublime bundler',
     'iterm',
     'ccmenu.app',
     'configs',

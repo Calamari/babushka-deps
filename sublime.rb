@@ -25,3 +25,15 @@ dep 'sublime package control' do
     shell "wget --directory-prefix='#{dir}' #{source}"
   }
 end
+
+dep 'sublime bundler' do
+  export_string = 'export BUNDLER_EDITOR=subl'
+
+  met? {
+    shell("cat #{ENV['HOME']}/.bash_profile").include?(export_string)
+  }
+
+  meet {
+    log_shell "Add subl as $BUNDLER_EDITOR", "echo '#{export_string}' >> ~/.bash_profile"
+  }
+end
