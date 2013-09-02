@@ -16,6 +16,7 @@ dep 'work ready' do
     'iterm',
     'ccmenu.app',
     'configs',
+    'pngenie',
 
     # Databases
     'redis',
