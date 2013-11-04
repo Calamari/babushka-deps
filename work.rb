@@ -17,6 +17,8 @@ dep 'work ready' do
     'ccmenu.app',
     'configs',
     'pngenie',
+    # TODO: make choice for imageoptim
+    'imagemagick',
 
     # Databases
     'redis',
