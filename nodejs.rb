@@ -1,5 +1,5 @@
 dep 'nodejs', :version, :template => 'src' do
-  version.default!('0.10.20')
+  version.default!('0.10.21')
   source "http://nodejs.org/dist/v#{version}/node-v#{version}.tar.gz"
   provides "node ~> #{version}"
 end
