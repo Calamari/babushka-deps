@@ -8,7 +8,7 @@ dep 'phantomjs download', :download_path do
     #shell "cd #{download_path}"
     log_shell "Download Phantomjs", "cd #{download_path} && wget #{source}"
     log_shell "Extract Phantomjs", "cd #{download_path} && unzip #{package_name}"
-    shell "rm #{download_path}/#{package_name}"
+    shell "rm -rf #{download_path}/#{package_name}"
   }
 end
 
