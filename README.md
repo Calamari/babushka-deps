@@ -18,7 +18,7 @@ sh -c "`curl https://babushka.me/up`"
 ### This babushka deps
 
 ~~~ bash
-babushka sources -a calamari git@github.com:Calamari/babushka-deps.git
+babushka sources -a calamari https://github.com/Calamari/babushka-deps.git
 ~~~
 
 ## What was installed?
