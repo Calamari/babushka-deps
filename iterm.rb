@@ -1,4 +1,5 @@
 dep 'iterm download', :download_path do
+  requires 'wget.managed'
   package_name = 'iTerm2_v1_0_0.zip'
   source = "http://www.iterm2.com/downloads/stable/#{package_name}"
 
