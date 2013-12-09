@@ -26,5 +26,8 @@ dep 'work ready' do
     'mysql',
 
     # NPM packages
-    'nodemon.npm'
+    'nodemon.npm',
+
+    # networking tool
+    'ngrep.managed'
 end
