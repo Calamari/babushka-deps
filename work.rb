@@ -10,7 +10,7 @@ dep 'work ready' do
     'homebrew',
     'subl',
     'sublime package control',
-    'rbenv ruby',
+    'rvm ruby',
     'bundler',
     'sublime bundler',
     'iterm',
