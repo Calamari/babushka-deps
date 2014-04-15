@@ -19,6 +19,7 @@ dep 'work ready' do
     'pngenie',
     # TODO: make choice for imageoptim
     'imagemagick',
+    'unrar.managed',
 
     # Databases
     'redis',
