@@ -19,7 +19,10 @@ dep 'work ready' do
     'pngenie',
     # TODO: make choice for imageoptim
     'imagemagick',
+
+    # Some useful line tools
     'unrar.managed',
+    'pwgen.managed',
 
     # Databases
     'redis',
