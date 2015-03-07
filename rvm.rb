@@ -10,7 +10,7 @@ dep 'rvm ruby', :version do
   requires \
     'rvm'
 
-  version.default!('2.0.0-p353')
+  version.default!('2.2.0')
 
   # write version into ~/.rvm/version
   met? {
