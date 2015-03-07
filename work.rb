@@ -28,6 +28,7 @@ dep 'work ready' do
     'redis',
     'mongodb',
     'mysql',
+    'postgres',
 
     # NPM packages
     'nodemon.npm',
