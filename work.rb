@@ -5,6 +5,7 @@ dep 'work ready' do
     'git.src',
     'git autocompletion',
     'nodejs',
+    'io.js',
     'npm.src',
     'phantomjs',
     'homebrew',
