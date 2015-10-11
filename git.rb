@@ -1,5 +1,5 @@
 dep 'git autocompletion' do
-  requires 'git.src'
+  requires 'git'
 
   met? { "~/.git-completion.bash".p.exists? }
 
@@ -10,4 +10,10 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi' >> $HOME/.bash_profile"
   }
+end
+
+dep 'git', :version, :template => 'src' do
+  version.default!('2.6.1')
+  source "https://www.kernel.org/pub/software/scm/git/git-#{version}.tar.gz"
+  provides "git ~> #{version}"
 end
