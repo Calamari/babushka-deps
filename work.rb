@@ -18,6 +18,8 @@ dep 'work ready' do
     'ccmenu.app',
     'configs',
     'pngenie',
+    # Actual version of rsync:
+    'rsync',
     # TODO: make choice for imageoptim
     'imagemagick',
 
