@@ -1,6 +1,6 @@
 dep 'rsync' do
   requires \
-    'tap dupes',
+    'tap'.with('dupes'),
     'rsync.managed'
 end
 
