@@ -1,6 +1,6 @@
 dep 'iterm download', :download_path do
   requires 'wget.managed'
-  package_name = 'iTerm2_v1_0_0.zip'
+  package_name = 'iTerm2-3_0_14.zip'
   source = "http://www.iterm2.com/downloads/stable/#{package_name}"
 
   met? { "#{download_path}/iTerm.app".p.exists? }
