@@ -6,11 +6,16 @@ dep 'rvm' do
   }
 end
 
+dep 'rubocop.gem' do
+  installs 'rubocop'
+end
+
 dep 'rvm ruby', :version do
   requires \
-    'rvm'
+    'rvm',
+    'rubocop.gem'
 
-  version.default!('2.2.0')
+  version.default!('2.4.0')
 
   # write version into ~/.rvm/version
   met? {
