@@ -6,7 +6,7 @@ dep 'work ready' do
     'node installs',
     'phantomjs',
     'homebrew',
-    'rvm ruby',
+    'languages',
     'bundler',
     'atom',
     'iterm',
