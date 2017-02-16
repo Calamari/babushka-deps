@@ -5,6 +5,6 @@ dep 'rsync' do
 end
 
 dep 'rsync.managed', :version do
-  version.default!('3.1.1')
+  version.default!('3.1.2')
   provides "rsync ~> #{version}"
 end
