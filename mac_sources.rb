@@ -14,6 +14,10 @@ dep "Dropbox.app" do
   source "https://www.dropbox.com/download?plat=mac"
 end
 
+dep "KeepassX.app" do
+  source "https://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.dmg"
+end
+
 dep "Postgres.app" do
   source "https://github.com/PostgresApp/PostgresApp/releases/download/v2.0.2/Postgres-2.0.2.dmg"
 end
@@ -32,6 +36,7 @@ dep "macOS Apps" do
     'Alfred.app',
     'CCMenu.app',
     'Dropbox.app',
+    'KeepassX.app',
     'Postgres.app',
     'VirtualBox.app',
     'VLC.app'
