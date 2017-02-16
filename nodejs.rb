@@ -5,5 +5,19 @@ dep 'nodejs', :version, :template => 'src' do
 end
 
 dep 'nodemon.npm' do
+  requires 'npm.src'
+
   provides 'nodemon'
+end
+
+dep 'nvm.npm' do
+  requires 'npm.src'
+
+  provides 'nvm'
+end
+
+dep 'node installs' do
+  requires \
+    'nodejs',
+    'nvm.npm'
 end
