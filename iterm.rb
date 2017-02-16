@@ -14,7 +14,7 @@ end
 dep 'iterm' do
   download_path = "#{ENV['HOME']}/.babushka/downloads"
 
-  requires 'iterm download'.with(download_path)
+  requires_when_unmet 'iterm download'.with(download_path)
 
 
   met? { '/Applications/iTerm.app'.p.exists?.tap{|v| p v} }

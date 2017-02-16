@@ -14,7 +14,7 @@ dep 'pngenie' do
   download_path = "#{ENV['HOME']}/.babushka/downloads"
   file_name = 'PNGenie.app'
 
-  requires 'pngenie download'.with(download_path, file_name)
+  requires_when_unmet 'pngenie download'.with(download_path, file_name)
 
 
   met? { "/Applications/#{file_name}".p.exists?.tap{|v| p v} }
