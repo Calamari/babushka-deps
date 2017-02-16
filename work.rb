@@ -20,9 +20,10 @@ dep 'work ready' do
     # TODO: make choice for imageoptim
     'imagemagick',
 
-    # Some useful line tools
+    # Some useful command line tools
     'unrar.managed',
     'pwgen.managed',
+    'ack.managed',
 
     # Databases
     'redis',
