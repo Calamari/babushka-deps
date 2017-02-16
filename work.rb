@@ -11,13 +11,14 @@ dep 'work ready' do
     'bundler',
     'atom',
     'iterm',
-    'ccmenu.app',
     'configs',
     'pngenie',
     # Actual version of rsync:
     'rsync',
     # TODO: make choice for imageoptim
     'imagemagick',
+
+    'macOS Apps',
 
     # Some useful command line tools
     'unrar.managed',
