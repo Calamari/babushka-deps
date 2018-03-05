@@ -40,8 +40,13 @@ dep 'ImageOptim', :version, template: 'src' do
   provides "ImageOptim.app ~> #{version}"
 end
 
-dep "KeepassX.app" do
-  source "https://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.dmg"
+dep "KeepassXC.app" do
+  requires 'homebrew'
+  met? { "/Applications/KeePassXC.app".p.exists? }
+
+  meet {
+    shell "brew cask install keepassxc"
+  }
 end
 
 dep "Postgres.app" do
@@ -96,8 +101,8 @@ dep "macOS Apps" do
     'Evernote.app',
     'Google Chrome.app',
     'ImageOptim',
-    'KeepassX.app',
     'Postgres.app',
+    'KeepassXC.app',
     'Slack',
     'VirtualBox.app',
     'Vivaldi.app',
