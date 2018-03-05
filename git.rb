@@ -13,7 +13,7 @@ fi' >> $HOME/.bash_profile"
 end
 
 dep 'git', :version, :template => 'src' do
-  version.default!('2.6.1')
+  version.default!('2.16.2')
   source "https://www.kernel.org/pub/software/scm/git/git-#{version}.tar.gz"
   provides "git ~> #{version}"
 end
