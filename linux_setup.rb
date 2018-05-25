@@ -2,7 +2,9 @@ dep 'curl.managed', sudo: true
 
 dep 'linux cli' do
   requires [
-    'curl.managed'
+    'curl.managed',
+
+    'docker.bin'
   ]
 end
 
@@ -16,5 +18,11 @@ dep 'linux setup' do
   requires [
     'linux cli',
     'linux apps'
+  ]
+end
+
+dep 'XING ready' do
+  requires [
+    'XING docker dns'
   ]
 end
