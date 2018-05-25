@@ -1,8 +1,10 @@
 dep 'curl.managed', sudo: true
+dep 'vim.managed', sudo: true
 
 dep 'linux cli' do
   requires [
     'curl.managed',
+    'vim.managed',
 
     'docker.bin'
   ]

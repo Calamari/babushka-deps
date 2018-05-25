@@ -7,6 +7,7 @@ end
 dep 'Atom' do
   requires {
     on :ubuntu, 'atom.installer'
+    on :elementary, 'atom.installer'
     on :osx, 'Atom.app'
   }
 end
@@ -59,7 +60,7 @@ apm_packages = [
   # ctrl+click to get somewhere
   # 'hyperclick',
   'js-hyperclick',
-  # vue supporttypescript
+  # vue support
   'language-vue',
   # linters
   'linter',

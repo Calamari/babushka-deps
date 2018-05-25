@@ -8,7 +8,7 @@ dep 'work ready' do
     'homebrew',
     'languages',
     'bundler',
-    # 'atom',
+    # 'Atom with packages',
     'subl',
     'iterm',
     'configs',
