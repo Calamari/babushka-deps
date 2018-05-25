@@ -1,10 +1,21 @@
 dep 'curl.managed', sudo: true
 dep 'vim.managed', sudo: true
 
+dep 'openssl.lib' do
+  installs {
+    via :apt, 'libssl-dev'
+    via :yum, 'openssl-devel'
+    otherwise 'openssl'
+  }
+end
 dep 'linux cli' do
   requires [
+    'build tools',
+    'openssl.lib',
+
     'curl.managed',
     'vim.managed',
+    'nodejs',
 
     'docker.bin'
   ]

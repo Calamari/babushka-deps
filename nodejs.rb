@@ -1,23 +1,21 @@
-dep 'nodejs', :version, :template => 'src' do
-  version.default!('6.9.5')
-  source "http://nodejs.org/dist/v#{version}/node-v#{version}.tar.gz"
-  provides "node ~> #{version}"
+dep 'nvm', :version do
+  version.default!('0.33.11')
+  # met? { log in_path?('nvm --version') }
+  met? { "~/.nvm".p.dir? }
+  meet {
+    log_shell 'Downloading & installing nvm', "wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash"
+  }
 end
 
-dep 'nodemon.npm' do
-  requires 'npm.src'
+dep 'nodejs', :version do
+  version.default!('8')
 
-  provides 'nodemon'
-end
+  requires 'nvm'
 
-dep 'nvm.npm' do
-  requires 'npm.src'
+  nvm_exec = '. ~/.nvm/nvm.sh && nvm'
 
-  provides 'nvm'
-end
-
-dep 'node installs' do
-  requires \
-    'nodejs',
-    'nvm.npm'
+  met? { shell?("#{nvm_exec} which #{version}") }
+  meet {
+    shell "#{nvm_exec} install #{version}"
+  }
 end
