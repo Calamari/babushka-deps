@@ -1,11 +1,27 @@
-dep 'atom' do
+dep 'Atom with packages' do
   requires \
-    'Atom.app',
+    'Atom',
     'atom packages'
 end
 
+dep 'Atom' do
+  requires {
+    on :ubuntu, 'atom.installer'
+    on :osx, 'Atom.app'
+  }
+end
+
 dep 'Atom.app' do
-  source "https://atom.io/download/mac"
+  source 'https://atom.io/download/mac'
+  version '0'
+end
+
+dep 'atom.installer' do
+  source 'https://atom.io/download/deb'
+end
+
+dep 'Atom.app' do
+  source 'https://atom.io/download/mac'
   version '0'
 end
 
@@ -13,7 +29,7 @@ meta :apm do
   accepts_value_for :version
 
   template {
-    requires 'Atom.app'
+    requires 'Atom'
     pkg_name = name.split('.').first
 
     met? {
@@ -29,27 +45,31 @@ apm_packages = [
   # beautification
   'atom-beautify',
   'editorconfig',
-  # typescript support
+  # Typescript support
   'atom-typescript',
+  # Flowtype support
+  'ide-flowtype',
   # autocompletion stuff
   'autocomplete-css',
   'autocomplete-paths',
   'autocomplete-plus',
   # git
   'git-blame',
-  'merge-conflicts',
+  # 'merge-conflicts',
   # ctrl+click to get somewhere
-  'hyperclick',
+  # 'hyperclick',
   'js-hyperclick',
   # vue support
   'language-vue',
   # linters
   'linter',
+  'linter-docker',
   'linter-eslint',
   'linter-flow',
   'linter-js-standard',
   'linter-rubocop',
-  'linter-scss-lint',
+  'linter-stylelint',
+  'linter-ui-default',
   'linter-tslint',
   # Markdown support
   'markdown-preview-plus',
@@ -61,6 +81,9 @@ apm_packages = [
   'react',
   # Javascript snippets
   'standardjs-snippets',
+  'atom-jest-snippets',
+  # Remote collaboration
+  'teletype',
   # Showing ToDo
   'todo-show'
 ]
