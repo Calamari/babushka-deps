@@ -36,7 +36,7 @@ meta :apm do
       !shell("apm list | grep #{pkg_name}@").nil?
     }
     meet {
-      shell("apm install #{pkg_name}")
+      log_shell("installing atom package #{pkg_name}", "apm install #{pkg_name}")
     }
   }
 end
@@ -59,7 +59,7 @@ apm_packages = [
   # ctrl+click to get somewhere
   # 'hyperclick',
   'js-hyperclick',
-  # vue support
+  # vue supporttypescript
   'language-vue',
   # linters
   'linter',
