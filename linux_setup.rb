@@ -16,6 +16,7 @@ dep 'linux cli' do
     'curl.managed',
     'vim.managed',
     'nodejs',
+    'oh-my-zsh',
 
     'docker.bin'
   ]
