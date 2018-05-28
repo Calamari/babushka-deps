@@ -6,8 +6,8 @@ end
 
 dep 'Atom' do
   requires {
-    on :ubuntu, 'atom.installer'
-    on :elementary, 'atom.installer'
+    on :ubuntu, 'atom.deb'
+    on :elementary, 'atom.deb'
     on :osx, 'Atom.app'
   }
 end
@@ -17,8 +17,16 @@ dep 'Atom.app' do
   version '0'
 end
 
-dep 'atom.installer' do
+dep 'atom.deb' do
   source 'https://atom.io/download/deb'
+  download_path = '~/.babushka/downloads/atom.deb'
+
+  met? { 'atom'.p.exists? }
+
+  meet {
+    log_shell 'Doanloading atom', "wget #{source} -o #{download_path}"
+    log_shell 'Installing atom', "dpkg -i #{download_path}"
+  }
 end
 
 dep 'Atom.app' do
